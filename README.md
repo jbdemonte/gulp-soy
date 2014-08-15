@@ -10,6 +10,7 @@ First, install `gulp-soy` as a development dependency:
 npm install --save-dev gulp-soy
 ```
 
+## Example
 
 ```javascript
 var soy = require("gulp-soy"),
