@@ -1,4 +1,4 @@
-# gulp-soy [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][depstat-image]][depstat-url]
+# gulp-soy [![NPM version][npm-image]][npm-url] [![Dependency Status][depstat-image]][depstat-url]
 
 [Buy author a beer](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=WCUX27CFV79S2)
 
