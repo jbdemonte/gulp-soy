@@ -1,0 +1,47 @@
+{
+    "name": "gulp-soy",
+    "description": "Gulp plugin to build Google Closure Templates, aka Soy",
+    "version": "1.0.0",
+    "homepage": "https://github.com/jbdemonte/gulp-soy",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/jbdemonte/gulp-soy.git"
+    },
+    "author": {
+        "name": "Jean-Baptiste DEMONTE",
+        "email": "jbdemonte@gmail.com",
+        "url": "http://jb.demonte.fr"
+    },
+    "main": "./index.js",
+    "keywords": [
+        "gulpplugin",
+        "soy",
+        "google",
+        "closure",
+        "template"
+    ],
+    "dependencies": {
+        "through": "^2.3.4",
+        "gulp-util": "^2.2.5",
+        "closure-templates": "20130416.0.0",
+        "MD5": "^1.2.1"
+    },
+    "devDependencies": {
+        "mocha": "*",
+        "should": "*"
+    },
+    "scripts": {
+        "test": "mocha"
+    },
+    "engines": {
+        "node": ">= 0.10"
+    },
+    "licenses": [
+        {
+            "type": "MIT"
+        }
+    ],
+    "bugs": {
+        "url": "https://github.com/jbdemonte/gulp-soy/issues"
+    }
+}
