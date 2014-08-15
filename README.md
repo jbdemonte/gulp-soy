@@ -4,13 +4,15 @@
 
 ## Usage
 
+### Installation
+
 First, install `gulp-soy` as a development dependency:
 
 ```shell
 npm install --save-dev gulp-soy
 ```
 
-## Example
+### Example
 
 ```javascript
 var soy = require("gulp-soy"),
