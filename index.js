@@ -30,7 +30,7 @@ module.exports = function (options) {
         }
     }
 
-    function build(input, output, callback) {
+    function build(self, input, output, callback) {
         var cp,
             stderr = "",
             args = [
@@ -51,6 +51,7 @@ module.exports = function (options) {
             if (exitCode) {
                 console.error("Compile error\n", stderr);
                 self.emit("compile", new Error("Error compiling templates"), false);
+                self.emit("end");
             } else {
                 callback();
             }
@@ -98,7 +99,7 @@ module.exports = function (options) {
             if (fs.existsSync(pathHash)) {
                 callback();
             } else {
-                build(file.path, pathHash, callback);
+                build(self, file.path, pathHash, callback);
             }
         });
     }
