@@ -1,7 +1,7 @@
 {
     "name": "gulp-soy",
     "description": "Gulp plugin to build Google Closure Templates, aka Soy",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "homepage": "https://github.com/jbdemonte/gulp-soy",
     "repository": {
         "type": "git",
