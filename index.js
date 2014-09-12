@@ -3,6 +3,7 @@ var through = require("through"),
     Buffer = require("buffer").Buffer,
     PluginError = gutil.PluginError,
     fs = require("fs"),
+    os = require("os"),
     File = gutil.File,
     closureTemplates = require("closure-templates"),
     path = require("path"),
@@ -14,7 +15,7 @@ module.exports = function (options) {
         options = {};
     }
 
-    var tmp = path.resolve(options.tmpDir || "/tmp/soy"),
+    var tmp = path.resolve(options.tmpDir || path.join(os.tmpdir(), "soy")),
         addSoyUtils = options.hasOwnProperty("soyutils") ? options.soyutils : true,
         compiler = path.resolve(closureTemplates["SoyToJsSrcCompiler.jar"]),
         soyUtils = path.resolve(closureTemplates["soyutils.js"]),
