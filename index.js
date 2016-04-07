@@ -17,6 +17,7 @@ module.exports = function (options) {
 
     var tmp = path.resolve(options.tmpDir || path.join(os.tmpdir(), "soy")),
         addSoyUtils = options.hasOwnProperty("soyutils") ? options.soyutils : true,
+        compilerFlags = options.hasOwnProperty("flags") ? options.flags : [],
         compiler = path.resolve(closureTemplates["SoyToJsSrcCompiler.jar"]),
         soyUtils = path.resolve(closureTemplates["soyutils.js"]),
         files = [];
@@ -34,14 +35,17 @@ module.exports = function (options) {
     function build(self, input, output, callback) {
         var cp,
             stderr = "",
-            args = [
+            exec = [
                 "-classpath", compiler,
                 "com.google.template.soy.SoyToJsSrcCompiler",
-                "--codeStyle", "concat",
+                "--codeStyle", "concat"
+            ],
+            inout = [
                 "--outputPathFormat", output,
                 input
             ];
 
+        args = exec.concat(compilerFlags, inout);
         cp = spawn("java", args);
 
         cp.stderr.on("data", function (data) {
